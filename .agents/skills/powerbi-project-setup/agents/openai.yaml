@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Project Setup"
+  short_description: "Initialize topology-aware PBIP workspaces"
+  default_prompt: "Use $powerbi-project-setup to initialize the PBIP topology defined by my manifest."

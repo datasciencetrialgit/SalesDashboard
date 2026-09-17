@@ -15,3 +15,4 @@
 | 10 — Static validation | Complete | `scripts/validate_salesdashboard.py` passes |
 | 11 — Desktop integration | Pending | Requires Windows Power BI Desktop after extraction |
 | 12 — Handoff | Complete except Desktop gate | README, rebinding scripts, QA record, packaged ZIP |
+| 13 — Embedded agent workspace | Complete | 12 project skills, 12 custom agents, instructions, scaffold resources, and CI validation |

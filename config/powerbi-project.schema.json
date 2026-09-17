@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/powerbi-project.schema.json",
+  "title": "Generic Power BI Project Manifest",
+  "type": "object",
+  "required": ["schemaVersion", "project", "artifacts", "connections", "model", "report", "security", "deployment", "quality"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "project": {
+      "type": "object",
+      "required": ["name", "displayName", "description"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{1,63}$" },
+        "displayName": { "type": "string", "minLength": 2 },
+        "description": { "type": "string", "minLength": 10 },
+        "domain": { "type": "string" },
+        "ownerTeam": { "type": "string" }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "required": ["semanticModel", "reports"],
+      "properties": {
+        "semanticModel": {
+          "type": "object",
+          "required": ["kind", "format", "storageMode"],
+          "properties": {
+            "kind": { "enum": ["local", "remote", "none"] },
+            "format": { "enum": ["TMDL", "TMSL", "none"] },
+            "storageMode": { "enum": ["Import", "DirectQuery", "DirectLake", "Composite", "LiveConnection", "none"] }
+          }
+        },
+        "reports": { "type": "array" }
+      }
+    },
+    "connections": { "type": "array" },
+    "model": { "type": "object" },
+    "report": { "type": "object" },
+    "security": { "type": "object" },
+    "deployment": { "type": "object" },
+    "quality": { "type": "object" },
+    "extensions": { "type": "array" }
+  }
+}

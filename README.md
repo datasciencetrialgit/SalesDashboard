@@ -51,3 +51,21 @@ python -m unittest discover -s tests -v
 - The resource path is a bare filename.
 
 Static validation passed during packaging. The Windows Power BI Desktop round-trip must be completed after extraction and path rebinding.
+
+## Built-in skills and agents
+
+This repository is self-contained for AI-assisted Power BI development:
+
+- `.agents/skills/` contains 12 portable Agent Skills covering requirements, PBIP setup, data connectivity, semantic modeling, DAX, design, PBIR authoring, security, performance, validation, deployment, and orchestration.
+- `.github/agents/` contains matching workspace custom agents for VS Code and GitHub Copilot.
+- `AGENTS.md` routes work to the correct skill and defines project-wide safeguards.
+- `.github/copilot-instructions.md` applies the SalesDashboard-specific PBIR and CSV-path invariants.
+- `config/`, `templates/`, `examples/`, and the generic scripts under `scripts/` provide the reusable scaffold resources referenced by the skills.
+
+Open the extracted `SalesDashboard` folder as the VS Code workspace. Use the **Power BI Orchestrator** custom agent, or start with:
+
+```text
+Use $powerbi-orchestrator to inspect this project and execute the next valid phase.
+```
+
+To work on one area directly, select its matching custom agent or invoke skills such as `$powerbi-dax`, `$powerbi-pbir-authoring`, or `$powerbi-testing-validation`.

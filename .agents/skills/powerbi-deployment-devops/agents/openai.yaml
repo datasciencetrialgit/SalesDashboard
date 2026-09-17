@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Deployment DevOps"
+  short_description: "Promote Power BI artifacts safely"
+  default_prompt: "Use $powerbi-deployment-devops to prepare and validate this Power BI release."

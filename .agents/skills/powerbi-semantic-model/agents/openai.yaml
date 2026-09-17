@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Semantic Model"
+  short_description: "Author governed TMDL semantic models"
+  default_prompt: "Use $powerbi-semantic-model to design and author the semantic model defined in my manifest."

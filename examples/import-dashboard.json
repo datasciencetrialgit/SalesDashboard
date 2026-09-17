@@ -1,0 +1,10 @@
+{
+  "extends": "../config/powerbi-project.template.json",
+  "profile": "import-dashboard",
+  "changes": {
+    "artifacts.semanticModel.kind": "local",
+    "artifacts.semanticModel.storageMode": "Import",
+    "artifacts.reports[0].semanticModel": "local"
+  },
+  "notes": "Use the full template and apply these values; define project-specific sources, model objects, pages, and security."
+}

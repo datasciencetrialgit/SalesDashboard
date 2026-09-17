@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Report Design"
+  short_description: "Plan accessible decision-focused reports"
+  default_prompt: "Use $powerbi-report-design to create a page and interaction plan from my manifest and model."

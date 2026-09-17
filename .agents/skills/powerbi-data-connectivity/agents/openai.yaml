@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Data Connectivity"
+  short_description: "Build sources, Power Query, and refresh paths"
+  default_prompt: "Use $powerbi-data-connectivity to design and validate the project's data access layer."

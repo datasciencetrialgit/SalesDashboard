@@ -11,6 +11,10 @@
 - Theme path guard: Passed (bare filename)
 - Page geometry: Passed (1280 × 720, FitToPage)
 - Visual inventory: Passed (4 cards, 3 charts, 1 table, 1 title)
+- Project skills: Passed (`quick_validate.py` for all 12 skills)
+- Custom agents: Passed (12 matching `.github/agents/*.agent.md` files)
+- Self-contained scaffold: Passed (`scripts/validate_scaffold.py`)
+- Automated unit tests: Passed (10 tests)
 - Accessibility structure: Unique tab order passed; final visual inspection pending
 - Power BI Desktop open: Pending
 - Model refresh: Pending

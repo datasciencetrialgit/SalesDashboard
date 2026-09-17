@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Orchestrator"
+  short_description: "Coordinate the full Power BI lifecycle"
+  default_prompt: "Use $powerbi-orchestrator to identify and execute the next valid project phase."

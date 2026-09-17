@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI PBIR Authoring"
+  short_description: "Author enhanced PBIR reports safely"
+  default_prompt: "Use $powerbi-pbir-authoring to implement the next validated PBIR layer from the report plan."

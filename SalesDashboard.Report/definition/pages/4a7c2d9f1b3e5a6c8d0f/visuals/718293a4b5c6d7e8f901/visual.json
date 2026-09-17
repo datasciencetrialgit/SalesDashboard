@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "718293a4b5c6d7e8f901",
   "position": {
     "x": 956,
@@ -27,8 +27,7 @@
                 }
               },
               "queryRef": "Sales.Category",
-              "nativeQueryRef": "Category",
-              "active": true
+              "nativeQueryRef": "Category"
             }
           ]
         },

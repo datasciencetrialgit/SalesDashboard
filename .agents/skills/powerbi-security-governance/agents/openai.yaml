@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Security Governance"
+  short_description: "Implement and verify governed data access"
+  default_prompt: "Use $powerbi-security-governance to implement and test the manifest's security requirements."

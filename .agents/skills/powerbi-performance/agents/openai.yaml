@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Performance"
+  short_description: "Measure and optimize Power BI performance"
+  default_prompt: "Use $powerbi-performance to diagnose this measured Power BI performance problem."

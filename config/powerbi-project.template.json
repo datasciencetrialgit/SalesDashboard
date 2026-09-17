@@ -1,0 +1,83 @@
+{
+  "$schema": "./powerbi-project.schema.json",
+  "schemaVersion": "1.0",
+  "project": {
+    "name": "ContosoAnalytics",
+    "displayName": "Contoso Analytics",
+    "description": "Replace with the business outcome and intended audience.",
+    "domain": "ReplaceMe",
+    "ownerTeam": "ReplaceMe"
+  },
+  "artifacts": {
+    "semanticModel": {
+      "kind": "local",
+      "format": "TMDL",
+      "storageMode": "Import",
+      "remoteConnection": null
+    },
+    "reports": [
+      {
+        "name": "ContosoAnalytics",
+        "format": "PBIR",
+        "semanticModel": "local"
+      }
+    ]
+  },
+  "connections": [
+    {
+      "name": "PrimarySource",
+      "kind": "replace-me",
+      "location": "replace-me",
+      "authentication": "configured-outside-source-control",
+      "privacyLevel": "Organizational",
+      "gatewayRequired": false,
+      "requiresAbsoluteLocalPath": false,
+      "parameters": []
+    }
+  ],
+  "model": {
+    "tables": [],
+    "relationships": [],
+    "measures": [],
+    "calculationGroups": [],
+    "perspectives": [],
+    "cultures": ["en-US"],
+    "dateTable": null,
+    "incrementalRefreshPolicies": []
+  },
+  "report": {
+    "theme": null,
+    "pages": [],
+    "bookmarks": [],
+    "mobileLayouts": false,
+    "accessibility": {
+      "requireAltText": true,
+      "requireTabOrder": true,
+      "minimumContrast": "WCAG-AA"
+    }
+  },
+  "security": {
+    "rlsRoles": [],
+    "ols": [],
+    "sensitivityLabel": null,
+    "certificationTarget": null
+  },
+  "deployment": {
+    "strategy": "manual",
+    "environments": [
+      { "name": "Development", "workspace": null, "parameters": {} },
+      { "name": "Test", "workspace": null, "parameters": {} },
+      { "name": "Production", "workspace": null, "parameters": {} }
+    ]
+  },
+  "quality": {
+    "requireDesktopRoundTrip": true,
+    "requireMeasureTests": true,
+    "requireAccessibilityReview": true,
+    "requireSecurityReview": true,
+    "maxVisualsPerPage": 12,
+    "targetVisualRenderMs": 3000,
+    "targetRefreshMinutes": null
+  },
+  "extensions": []
+}

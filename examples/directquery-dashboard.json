@@ -1,0 +1,10 @@
+{
+  "extends": "../config/powerbi-project.template.json",
+  "profile": "directquery-dashboard",
+  "changes": {
+    "artifacts.semanticModel.kind": "local",
+    "artifacts.semanticModel.storageMode": "DirectQuery",
+    "connections[0].gatewayRequired": true
+  },
+  "notes": "Validate source folding, concurrency, gateway placement, SSO, and query latency before report authoring."
+}

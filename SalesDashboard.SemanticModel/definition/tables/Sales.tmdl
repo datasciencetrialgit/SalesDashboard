@@ -3,125 +3,95 @@ table Sales
 
 	measure 'Total Revenue' = SUM(Sales[Revenue])
 		formatString: $#,0.00
-		lineageTag: 853e7df6-4dc3-4b13-ac79-723a070e5b6e
 
 	measure 'Gross Profit' = [Total Revenue] - SUM(Sales[Cost])
 		formatString: $#,0.00
-		lineageTag: b78a45d3-3e4e-461c-ba82-988a26445629
 
 	measure 'Gross Margin %' = DIVIDE([Gross Profit], [Total Revenue])
 		formatString: 0.0%
-		lineageTag: 8e417eb4-0f0f-4f1c-a8ba-e8d1b3bb1454
 
 	measure 'Units Sold' = SUM(Sales[Units])
 		formatString: #,0
-		lineageTag: 993a6174-3a9e-4832-90ae-893e6c63d05f
 
 	measure Orders = DISTINCTCOUNT(Sales[OrderID])
 		formatString: #,0
-		lineageTag: b0398de6-5ed7-42f5-8956-1dc40e95ec87
 
 	measure 'Average Order Value' = DIVIDE([Total Revenue], [Orders])
 		formatString: $#,0.00
-		lineageTag: 366db853-c572-495a-982e-e2f480cf2dec
 
 	column OrderDate
 		dataType: dateTime
 		formatString: Short Date
-		lineageTag: d405da1d-78a2-4fea-9d37-688034acce91
 		summarizeBy: none
 		sourceColumn: OrderDate
 
-		variation Variation
-			isDefault
-			relationship: e5f333bc-8487-4528-95e2-361008641379
-			defaultHierarchy: LocalDateTable_a0b9b1c5-9a8c-4820-8fb2-720fc250920f.'Date Hierarchy'
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column OrderID
 		dataType: string
-		lineageTag: c3b457ac-b5f2-401c-b391-80983ec1ad9d
 		summarizeBy: none
 		sourceColumn: OrderID
 
 	column Region
 		dataType: string
-		lineageTag: a5c87a4a-b29b-487e-bfcb-be2190f83a5d
 		summarizeBy: none
 		sourceColumn: Region
 
 	column Salesperson
 		dataType: string
-		lineageTag: 0c91678b-134d-467d-80ad-7c92d472cff7
 		summarizeBy: none
 		sourceColumn: Salesperson
 
 	column Category
 		dataType: string
-		lineageTag: b5ec764c-2de8-4564-96da-7204a7dea0f5
 		summarizeBy: none
 		sourceColumn: Category
 
 	column Product
 		dataType: string
-		lineageTag: 7ea2224e-db93-436e-b939-65fdb3eea304
 		summarizeBy: none
 		sourceColumn: Product
 
 	column Units
 		dataType: int64
 		formatString: 0
-		lineageTag: c95c88ee-ed25-4728-bc26-7e51c35b21f8
 		summarizeBy: sum
 		sourceColumn: Units
 
 	column Revenue
 		dataType: double
 		formatString: $#,0.00
-		lineageTag: 115f5425-ffaa-445d-8d49-110fa964ec93
 		summarizeBy: sum
 		sourceColumn: Revenue
 
 	column Cost
 		dataType: double
 		formatString: $#,0.00
-		lineageTag: ae688082-5d31-49dc-aa64-1c244e745f16
 		summarizeBy: sum
 		sourceColumn: Cost
 
 	column 'Month Start' = DATE(YEAR(Sales[OrderDate]), MONTH(Sales[OrderDate]), 1)
 		dataType: dateTime
 		formatString: MMM yyyy
-		lineageTag: f84d2f4e-1b7c-405d-a7d9-8d8935bb0a27
 		summarizeBy: none
-
-		variation Variation
-			isDefault
-			relationship: 775c2588-eb97-4b9b-8caf-5a0ee0ed4fa4
-			defaultHierarchy: LocalDateTable_180d6482-b86f-42fb-8a58-1696a3c9b7b0.'Date Hierarchy'
 
 	partition Sales = m
 		mode: import
 		source =
-				let
-					Source = Csv.Document(File.Contents("C:/Users/datas/Downloads/SalesDashboard-PBIP/SalesDashboard/data/sales.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
-					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-					ChangedTypes = Table.TransformColumnTypes(PromotedHeaders, {
-						{"OrderDate", type date},
-						{"OrderID", type text},
-						{"Region", type text},
-						{"Salesperson", type text},
-						{"Category", type text},
-						{"Product", type text},
-						{"Units", Int64.Type},
-						{"Revenue", type number},
-						{"Cost", type number}
-					})
-				in
-					ChangedTypes
+			let
+				Source = Csv.Document(File.Contents("C:/Users/datas/Downloads/SalesDashboard-PBIP/SalesDashboard/data/sales.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				ChangedTypes = Table.TransformColumnTypes(PromotedHeaders, {
+					{"OrderDate", type date},
+					{"OrderID", type text},
+					{"Region", type text},
+					{"Salesperson", type text},
+					{"Category", type text},
+					{"Product", type text},
+					{"Units", Int64.Type},
+					{"Revenue", type number},
+					{"Cost", type number}
+				})
+			in
+				ChangedTypes
 
 	annotation PBI_NavigationStepName = Navigation
-
 	annotation PBI_ResultType = Table
-

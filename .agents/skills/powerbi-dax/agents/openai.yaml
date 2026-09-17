@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI DAX"
+  short_description: "Create, test, and optimize DAX calculations"
+  default_prompt: "Use $powerbi-dax to implement and reconcile the measures defined by the project contract."

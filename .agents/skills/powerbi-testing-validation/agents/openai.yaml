@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Testing Validation"
+  short_description: "Run full Power BI quality gates"
+  default_prompt: "Use $powerbi-testing-validation to run the applicable project quality gates and record evidence."

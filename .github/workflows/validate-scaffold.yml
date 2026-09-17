@@ -1,0 +1,20 @@
+name: Validate SalesDashboard and Agent Scaffold
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/validate_scaffold.py
+      - run: python scripts/validate_manifest.py config/powerbi-project.template.json --allow-template-placeholders
+      - run: python scripts/validate_manifest.py powerbi-project.json
+      - run: python scripts/validate_project.py --manifest powerbi-project.json --root .
+      - run: python scripts/validate_salesdashboard.py
+      - run: python -m unittest discover -s tests -v

@@ -1,0 +1,11 @@
+{
+  "extends": "../config/powerbi-project.template.json",
+  "profile": "thin-report",
+  "changes": {
+    "artifacts.semanticModel.kind": "remote",
+    "artifacts.semanticModel.format": "none",
+    "artifacts.semanticModel.storageMode": "LiveConnection",
+    "artifacts.reports[0].semanticModel": "remote"
+  },
+  "notes": "Set remoteConnection metadata outside secrets and do not generate a local SemanticModel folder."
+}

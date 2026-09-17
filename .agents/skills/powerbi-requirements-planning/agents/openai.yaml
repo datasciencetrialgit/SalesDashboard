@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power BI Requirements Planning"
+  short_description: "Define scope, topology, and acceptance criteria"
+  default_prompt: "Use $powerbi-requirements-planning to turn my requirements into a complete Power BI project contract."

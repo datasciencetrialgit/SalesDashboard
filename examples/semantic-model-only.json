@@ -1,0 +1,10 @@
+{
+  "extends": "../config/powerbi-project.template.json",
+  "profile": "semantic-model-only",
+  "changes": {
+    "artifacts.semanticModel.kind": "local",
+    "artifacts.semanticModel.format": "TMDL",
+    "artifacts.reports": []
+  },
+  "notes": "Author and deploy a reusable governed semantic model without report artifacts."
+}

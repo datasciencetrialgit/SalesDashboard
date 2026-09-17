@@ -1,20 +1,7 @@
 model Model
 	culture: en-US
 	defaultPowerBIDataSourceVersion: powerBI_V3
-	discourageImplicitMeasures
 	sourceQueryCulture: en-US
-	dataAccessOptions
-		legacyRedirects
-		returnErrorValuesAsNull
-
-annotation PBI_QueryOrder = ["Sales"]
-
-annotation __PBI_TimeIntelligenceEnabled = 1
-
-annotation PBI_ProTooling = ["DevMode"]
+	discourageImplicitMeasures
 
 ref table Sales
-ref table DateTableTemplate_b1259bd2-1a11-4bd1-ab13-d349968e09e6
-ref table LocalDateTable_a0b9b1c5-9a8c-4820-8fb2-720fc250920f
-ref table LocalDateTable_180d6482-b86f-42fb-8a58-1696a3c9b7b0
-
