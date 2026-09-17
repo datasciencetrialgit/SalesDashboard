@@ -1,0 +1,10 @@
+relationship e5f333bc-8487-4528-95e2-361008641379
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Sales.OrderDate
+	toColumn: LocalDateTable_a0b9b1c5-9a8c-4820-8fb2-720fc250920f.Date
+
+relationship 775c2588-eb97-4b9b-8caf-5a0ee0ed4fa4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Sales.'Month Start'
+	toColumn: LocalDateTable_180d6482-b86f-42fb-8a58-1696a3c9b7b0.Date
+

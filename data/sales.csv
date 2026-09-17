@@ -1,0 +1,73 @@
+OrderDate,OrderID,Region,Salesperson,Category,Product,Units,Revenue,Cost
+2026-01-03,SO-1001,South,Maya,Software,Analytics Pro,4,996,312
+2026-01-06,SO-1002,East,Liam,Services,Training Pack,6,2394,846
+2026-01-09,SO-1003,West,Sofia,Hardware,Keyboard Pro,2,198,108
+2026-01-12,SO-1004,North,Noah,Software,Analytics Pro,4,996,312
+2026-01-15,SO-1005,South,Maya,Services,Training Pack,6,2250.36,846
+2026-01-18,SO-1006,East,Liam,Hardware,Keyboard Pro,2,198,108
+2026-01-21,SO-1007,West,Sofia,Software,Analytics Pro,4,996,312
+2026-01-24,SO-1008,North,Noah,Services,Training Pack,6,2394,846
+2026-02-04,SO-1009,East,Priya,Services,Implementation,1,699,292
+2026-02-07,SO-1010,West,Ethan,Hardware,Monitor 27,3,927.78,663
+2026-02-10,SO-1011,North,Avery,Software,Security Suite,5,995,330
+2026-02-13,SO-1012,South,Arjun,Services,Implementation,1,699,292
+2026-02-16,SO-1013,East,Priya,Hardware,Monitor 27,3,987,663
+2026-02-19,SO-1014,West,Ethan,Software,Security Suite,5,995,330
+2026-02-22,SO-1015,North,Avery,Services,Implementation,1,657.06,292
+2026-02-25,SO-1016,South,Arjun,Hardware,Monitor 27,3,987,663
+2026-03-05,SO-1017,West,Sofia,Hardware,Laptop Dock,4,716,448
+2026-03-08,SO-1018,North,Noah,Software,CRM Add-on,6,954,306
+2026-03-11,SO-1019,South,Maya,Services,Support Plus,2,598,212
+2026-03-14,SO-1020,East,Liam,Hardware,Laptop Dock,4,673.04,448
+2026-03-17,SO-1021,West,Sofia,Software,CRM Add-on,6,954,306
+2026-03-20,SO-1022,North,Noah,Services,Support Plus,2,598,212
+2026-03-23,SO-1023,South,Maya,Hardware,Laptop Dock,4,716,448
+2026-03-02,SO-1024,East,Liam,Software,CRM Add-on,6,954,306
+2026-04-06,SO-1025,North,Avery,Software,Analytics Pro,1,234.06,78
+2026-04-09,SO-1026,South,Arjun,Services,Training Pack,3,1197,423
+2026-04-12,SO-1027,East,Priya,Hardware,Keyboard Pro,5,495,270
+2026-04-15,SO-1028,West,Ethan,Software,Analytics Pro,1,249,78
+2026-04-18,SO-1029,North,Avery,Services,Training Pack,3,1197,423
+2026-04-21,SO-1030,South,Arjun,Hardware,Keyboard Pro,5,465.3,270
+2026-04-24,SO-1031,East,Priya,Software,Analytics Pro,1,249,78
+2026-04-03,SO-1032,West,Ethan,Services,Training Pack,3,1197,423
+2026-05-07,SO-1033,South,Maya,Services,Implementation,4,2796,1168
+2026-05-10,SO-1034,East,Liam,Hardware,Monitor 27,6,1974,1326
+2026-05-13,SO-1035,West,Sofia,Software,Security Suite,2,374.12,132
+2026-05-16,SO-1036,North,Noah,Services,Implementation,4,2796,1168
+2026-05-19,SO-1037,South,Maya,Hardware,Monitor 27,6,1974,1326
+2026-05-22,SO-1038,East,Liam,Software,Security Suite,2,398,132
+2026-05-25,SO-1039,West,Sofia,Services,Implementation,4,2796,1168
+2026-05-04,SO-1040,North,Noah,Hardware,Monitor 27,6,1855.56,1326
+2026-06-08,SO-1041,East,Priya,Hardware,Laptop Dock,1,179,112
+2026-06-11,SO-1042,West,Ethan,Software,CRM Add-on,3,477,153
+2026-06-14,SO-1043,North,Avery,Services,Support Plus,5,1495,530
+2026-06-17,SO-1044,South,Arjun,Hardware,Laptop Dock,1,179,112
+2026-06-20,SO-1045,East,Priya,Software,CRM Add-on,3,448.38,153
+2026-06-23,SO-1046,West,Ethan,Services,Support Plus,5,1495,530
+2026-06-02,SO-1047,North,Avery,Hardware,Laptop Dock,1,179,112
+2026-06-05,SO-1048,South,Arjun,Software,CRM Add-on,3,477,153
+2026-07-09,SO-1049,West,Sofia,Software,Analytics Pro,4,996,312
+2026-07-12,SO-1050,North,Noah,Services,Training Pack,6,2250.36,846
+2026-07-15,SO-1051,South,Maya,Hardware,Keyboard Pro,2,198,108
+2026-07-18,SO-1052,East,Liam,Software,Analytics Pro,4,996,312
+2026-07-21,SO-1053,West,Sofia,Services,Training Pack,6,2394,846
+2026-07-24,SO-1054,North,Noah,Hardware,Keyboard Pro,2,198,108
+2026-07-03,SO-1055,South,Maya,Software,Analytics Pro,4,936.24,312
+2026-07-06,SO-1056,East,Liam,Services,Training Pack,6,2394,846
+2026-08-10,SO-1057,North,Avery,Services,Implementation,1,699,292
+2026-08-13,SO-1058,South,Arjun,Hardware,Monitor 27,3,987,663
+2026-08-16,SO-1059,East,Priya,Software,Security Suite,5,995,330
+2026-08-19,SO-1060,West,Ethan,Services,Implementation,1,657.06,292
+2026-08-22,SO-1061,North,Avery,Hardware,Monitor 27,3,987,663
+2026-08-25,SO-1062,South,Arjun,Software,Security Suite,5,995,330
+2026-08-04,SO-1063,East,Priya,Services,Implementation,1,699,292
+2026-08-07,SO-1064,West,Ethan,Hardware,Monitor 27,3,987,663
+2026-09-11,SO-1065,South,Maya,Hardware,Laptop Dock,4,673.04,448
+2026-09-14,SO-1066,East,Liam,Software,CRM Add-on,6,954,306
+2026-09-17,SO-1067,West,Sofia,Services,Support Plus,2,598,212
+2026-09-20,SO-1068,North,Noah,Hardware,Laptop Dock,4,716,448
+2026-09-23,SO-1069,South,Maya,Software,CRM Add-on,6,954,306
+2026-09-02,SO-1070,East,Liam,Services,Support Plus,2,562.12,212
+2026-09-05,SO-1071,West,Sofia,Hardware,Laptop Dock,4,716,448
+2026-09-08,SO-1072,North,Noah,Software,CRM Add-on,6,954,306

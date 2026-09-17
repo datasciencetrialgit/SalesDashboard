@@ -1,0 +1,118 @@
+{
+    "$schema":  "../config/powerbi-project.schema.json",
+    "schemaVersion":  "1.0",
+    "project":  {
+                    "name":  "SalesDashboard",
+                    "displayName":  "Sales Dashboard",
+                    "description":  "Sample executive sales dashboard backed by a local CSV, a single imported Sales table, and an enhanced PBIR report.",
+                    "domain":  "Sales",
+                    "ownerTeam":  "Analytics"
+                },
+    "artifacts":  {
+                      "semanticModel":  {
+                                            "kind":  "local",
+                                            "format":  "TMDL",
+                                            "storageMode":  "Import",
+                                            "remoteConnection":  null
+                                        },
+                      "reports":  [
+                                      {
+                                          "name":  "SalesDashboard",
+                                          "format":  "PBIR",
+                                          "semanticModel":  "local"
+                                      }
+                                  ]
+                  },
+    "connections":  [
+                        {
+                            "name":  "SalesCsv",
+                            "kind":  "csv",
+                            "location":  "C:/Users/datas/Downloads/SalesDashboard-PBIP/SalesDashboard/data/sales.csv",
+                            "authentication":  "none",
+                            "privacyLevel":  "Organizational",
+                            "gatewayRequired":  false,
+                            "requiresAbsoluteLocalPath":  true,
+                            "parameters":  [
+
+                                           ]
+                        }
+                    ],
+    "model":  {
+                  "tables":  [
+                                 "Sales"
+                             ],
+                  "relationships":  [
+
+                                    ],
+                  "measures":  [
+                                   "Total Revenue",
+                                   "Gross Profit",
+                                   "Gross Margin %",
+                                   "Units Sold",
+                                   "Orders",
+                                   "Average Order Value"
+                               ],
+                  "calculationGroups":  [
+
+                                        ],
+                  "perspectives":  [
+
+                                   ],
+                  "cultures":  [
+                                   "en-US"
+                               ],
+                  "dateTable":  null,
+                  "incrementalRefreshPolicies":  [
+
+                                                 ]
+              },
+    "report":  {
+                   "theme":  "SalesDashboard.Report/StaticResources/RegisteredResources/Signal \u0026 Slate.json",
+                   "pages":  [
+                                 "Executive Overview"
+                             ],
+                   "bookmarks":  [
+
+                                 ],
+                   "mobileLayouts":  false,
+                   "accessibility":  {
+                                         "requireAltText":  true,
+                                         "requireTabOrder":  true,
+                                         "minimumContrast":  "WCAG-AA"
+                                     }
+               },
+    "security":  {
+                     "rlsRoles":  [
+
+                                  ],
+                     "ols":  [
+
+                             ],
+                     "sensitivityLabel":  null,
+                     "certificationTarget":  null
+                 },
+    "deployment":  {
+                       "strategy":  "local-sample",
+                       "environments":  [
+                                            {
+                                                "name":  "Local",
+                                                "workspace":  null,
+                                                "parameters":  {
+                                                                   "SalesCsvPath":  "C:/Users/datas/Downloads/SalesDashboard-PBIP/SalesDashboard/data/sales.csv"
+                                                               }
+                                            }
+                                        ]
+                   },
+    "quality":  {
+                    "requireDesktopRoundTrip":  true,
+                    "requireMeasureTests":  true,
+                    "requireAccessibilityReview":  true,
+                    "requireSecurityReview":  false,
+                    "maxVisualsPerPage":  10,
+                    "targetVisualRenderMs":  3000,
+                    "targetRefreshMinutes":  1
+                },
+    "extensions":  [
+
+                   ]
+}

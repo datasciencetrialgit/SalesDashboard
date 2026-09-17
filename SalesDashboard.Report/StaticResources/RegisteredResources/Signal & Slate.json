@@ -1,0 +1,148 @@
+{
+  "name": "Signal & Slate",
+  "dataColors": [
+    "#F26B5B",
+    "#2A9D8F",
+    "#D4A72C",
+    "#607D8B",
+    "#8F6FB1",
+    "#3D6B99",
+    "#C97A40",
+    "#6F8F72"
+  ],
+  "background": "#F6F4EF",
+  "foreground": "#1F2A30",
+  "tableAccent": "#F26B5B",
+  "firstLevelElements": "#1F2A30",
+  "secondLevelElements": "#607D8B",
+  "secondaryBackground": "#FFFFFF",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 28,
+      "color": "#1F2A30",
+      "bold": true
+    },
+    "title": {
+      "fontFace": "Segoe UI",
+      "fontSize": 12,
+      "color": "#1F2A30",
+      "bold": true
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#1F2A30",
+      "bold": true
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#1F2A30"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#E2DED6"
+              }
+            },
+            "radius": 8,
+            "width": 1
+          }
+        ],
+        "title": [
+          {
+            "show": true,
+            "fontFamily": "Segoe UI",
+            "fontSize": 12,
+            "fontColor": {
+              "solid": {
+                "color": "#1F2A30"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "columnHeaders": [
+          {
+            "autoSizeColumnWidth": true,
+            "columnAdjustment": "growToFit",
+            "backColor": {
+              "solid": {
+                "color": "#EFECE6"
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": "#1F2A30"
+              }
+            },
+            "bold": true
+          }
+        ],
+        "values": [
+          {
+            "backColorPrimary": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": "#FBFAF7"
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": "#1F2A30"
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": "#1F2A30"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "cardVisual": {
+      "*": {
+        "value": [
+          {
+            "bold": true,
+            "fontFamily": "Segoe UI",
+            "$id": "default"
+          }
+        ],
+        "label": [
+          {
+            "show": true,
+            "fontFamily": "Segoe UI",
+            "$id": "default"
+          }
+        ]
+      }
+    }
+  }
+}
