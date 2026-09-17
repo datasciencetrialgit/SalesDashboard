@@ -3,95 +3,115 @@ table Sales
 
 	measure 'Total Revenue' = SUM(Sales[Revenue])
 		formatString: $#,0.00
+		lineageTag: 4ac6a646-d962-453c-9df5-05e583aa0471
 
 	measure 'Gross Profit' = [Total Revenue] - SUM(Sales[Cost])
 		formatString: $#,0.00
+		lineageTag: 47bb0638-aea4-4e0b-ac1e-9363a27d4aac
 
 	measure 'Gross Margin %' = DIVIDE([Gross Profit], [Total Revenue])
 		formatString: 0.0%
+		lineageTag: 0e19eb63-6082-474e-b643-da5848cb7909
 
 	measure 'Units Sold' = SUM(Sales[Units])
 		formatString: #,0
+		lineageTag: f3780975-2195-455e-b928-cd69e8c7b48b
 
 	measure Orders = DISTINCTCOUNT(Sales[OrderID])
 		formatString: #,0
+		lineageTag: 9c39e3ce-889a-4e82-9928-0d0a9afb2405
 
 	measure 'Average Order Value' = DIVIDE([Total Revenue], [Orders])
 		formatString: $#,0.00
+		lineageTag: 9c83e27a-3caf-4c1b-b0cb-9b2140d5fd29
 
 	column OrderDate
 		dataType: dateTime
 		formatString: Short Date
+		lineageTag: 5bbeeceb-aa64-4af7-af8c-3f238fe929a7
 		summarizeBy: none
 		sourceColumn: OrderDate
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column OrderID
 		dataType: string
+		lineageTag: 47e1403d-c39c-4be8-af24-c2b1fb831a86
 		summarizeBy: none
 		sourceColumn: OrderID
 
 	column Region
 		dataType: string
+		lineageTag: 15aa11fc-c4fc-4fa4-a6fa-e310b178b95a
 		summarizeBy: none
 		sourceColumn: Region
 
 	column Salesperson
 		dataType: string
+		lineageTag: e31ad0aa-5a4b-4399-aa8d-75dd6c99c3ef
 		summarizeBy: none
 		sourceColumn: Salesperson
 
 	column Category
 		dataType: string
+		lineageTag: d5d860c8-ffb9-4f5c-9f65-83b1ac3cc07d
 		summarizeBy: none
 		sourceColumn: Category
 
 	column Product
 		dataType: string
+		lineageTag: 2fac79aa-95fd-471e-909d-e1ee5e5b122e
 		summarizeBy: none
 		sourceColumn: Product
 
 	column Units
 		dataType: int64
 		formatString: 0
+		lineageTag: 8d94da13-903d-45cd-a605-4382ca3ee299
 		summarizeBy: sum
 		sourceColumn: Units
 
 	column Revenue
 		dataType: double
 		formatString: $#,0.00
+		lineageTag: dedab18f-71bd-40f7-b8c5-404fab8fb8e3
 		summarizeBy: sum
 		sourceColumn: Revenue
 
 	column Cost
 		dataType: double
 		formatString: $#,0.00
+		lineageTag: 78de10a6-b3ae-4ba5-b774-315486e64225
 		summarizeBy: sum
 		sourceColumn: Cost
 
 	column 'Month Start' = DATE(YEAR(Sales[OrderDate]), MONTH(Sales[OrderDate]), 1)
 		dataType: dateTime
 		formatString: MMM yyyy
+		lineageTag: 8d4a7c34-32cb-4400-b9e3-022f56e3ae5d
 		summarizeBy: none
 
 	partition Sales = m
 		mode: import
 		source =
-			let
-				Source = Csv.Document(File.Contents("C:/Users/datas/Downloads/SalesDashboard-PBIP/SalesDashboard/data/sales.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
-				PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				ChangedTypes = Table.TransformColumnTypes(PromotedHeaders, {
-					{"OrderDate", type date},
-					{"OrderID", type text},
-					{"Region", type text},
-					{"Salesperson", type text},
-					{"Category", type text},
-					{"Product", type text},
-					{"Units", Int64.Type},
-					{"Revenue", type number},
-					{"Cost", type number}
-				})
-			in
-				ChangedTypes
+				let
+					Source = Csv.Document(File.Contents("C:/Users/datas/Downloads/SalesDashboard-PBIP/SalesDashboard/data/sales.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					ChangedTypes = Table.TransformColumnTypes(PromotedHeaders, {
+						{"OrderDate", type date},
+						{"OrderID", type text},
+						{"Region", type text},
+						{"Salesperson", type text},
+						{"Category", type text},
+						{"Product", type text},
+						{"Units", Int64.Type},
+						{"Revenue", type number},
+						{"Cost", type number}
+					})
+				in
+					ChangedTypes
 
 	annotation PBI_NavigationStepName = Navigation
+
 	annotation PBI_ResultType = Table
+

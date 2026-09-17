@@ -3,6 +3,10 @@
 **/.pbi/unappliedChanges.json
 **/.pbi/editorSettings.json
 
+# Power BI Desktop auto-generated date/time tables (regenerated locally, not part of the tracked model)
+**/definition/tables/LocalDateTable_*.tmdl
+**/definition/tables/DateTableTemplate_*.tmdl
+
 .env
 .env.*
 !.env.example
